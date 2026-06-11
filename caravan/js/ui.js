@@ -96,6 +96,7 @@ const App = {
           <button class="btn" data-action="new-multiplayer">MULTIPLAYER</button>
           <button class="btn btn-small" data-action="show-rules">HOW TO PLAY</button>
           <button class="btn btn-small" data-action="open-settings">SETTINGS</button>
+          <button class="btn btn-small" data-action="open-repo">GITHUB</button>
         </div>
       </div>
     `;
@@ -683,6 +684,8 @@ const App = {
       case 'do-discard-caravan':
         this.doDiscardCaravan();
         break;
+      case 'open-repo':
+        window.location.href = "https://github.com/raspbyte/caravan";
     }
   },
 
