@@ -406,7 +406,7 @@ const App = {
       }
     }
     const attached = row.attached.map(c => this.renderCardHTML(c, { attached: true })).join('');
-    const z = rowIdx + 1;
+    const z = 2 * rowIdx;
     return `
       <div class="stack-row ${targetableClass}" style="z-index: ${z}" data-row-target='${JSON.stringify({ playerIdx, caravanIdx, rowIdx })}' data-row-id="${playerIdx}-${caravanIdx}-${rowIdx}">
         ${this.renderCardHTML(row.number, { small: true })}
@@ -895,7 +895,7 @@ const App = {
   },
 
   makeGhostRowElement(row, rowIdx, isOpponent) {
-    const z = 2 * rowIdx + 1;
+    const z = 2 * rowIdx - 1;
     const div = document.createElement('div');
     div.className = 'stack-row ghost-removing';
     div.style.zIndex = z;
